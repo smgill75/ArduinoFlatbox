@@ -50,7 +50,29 @@
 // This particular use case has a very low likelihood to overwhelm the EEPROM, but it is worth it
 
 // Note: as of 3/16/2022 there is a known issue with EERPOMex and Boards such as the NANO wifi rev2. It's not the EEPROMex per se as much as the isready calling EEPROM.h for this board.
-// if compiling yourself, 
+// if compiling yourself, move the EEPROMex.cpp into your library. Note: here is the diff starting at line 98:
+
+//Orig:
+//  /** 
+// * Check if EEPROM memory is ready to be accessed 
+// */ 
+//bool EEPROMClassEx::isReady() { 
+//  return eeprom_is_ready(); 
+//} 
+
+//New:
+//  /**
+// * Check if EEPROM memory is ready to be accessed
+// */
+//bool EEPROMClassEx::isReady() {
+//  #if defined(ARDUINO_ARCH_MEGAAVR) //work around a bug in <avr/eeprom.h>
+//  return bit_is_clear(NVMCTRL.STATUS,NVMCTRL_EEBUSY_bp);
+//  #else
+//  return eeprom_is_ready();
+//  #endif
+//}
+
+
 
 //
 struct configuration {
