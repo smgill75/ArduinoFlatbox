@@ -1,5 +1,5 @@
 # ArduinoFlatbox
-This project is an intended to provide a codebased for an Arduino Controlled flatbox for astrophotography.
+This project is an intended to provide a codebase for an Arduino Controlled flatbox for astrophotography.
 
 While there are other examples that utilize the Alnitak command protocol, and I use the techniques to write the
 value to the LED pin, I am updating the protocol to make it readable.
