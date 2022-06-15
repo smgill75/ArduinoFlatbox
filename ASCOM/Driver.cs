@@ -248,30 +248,6 @@ namespace ASCOM.ArduinoFlatbox
             return "";
         }
 
-        private string send_command_network(string command)
-        {
-            TcpClient client = new TcpClient();
-            NetworkStream nwStream;
-            client.Connect(iphost, port);
-            nwStream = client.GetStream();
-            byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes(command);
-            nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-
-            byte[] bytesToRead = new byte[client.ReceiveBufferSize];
-            int bytesRead = nwStream.Read(bytesToRead, 0, client.ReceiveBufferSize);
-
-            string message =  Encoding.ASCII.GetString(bytesToRead, 0, bytesRead);
-            //System.Windows.Forms.MessageBox.Show(message);
-            nwStream.Dispose();
-            nwStream.Close();
-            client.Dispose();
-            client.Close();
-            
-            return message;
-
-
-        }
-
 
         private int getBrightness()
         {
