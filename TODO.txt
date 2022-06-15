@@ -1,0 +1,6 @@
+Create HEX file for upload of sketch
+Consider removing need for Arduino software for sketch upload and move more to a firmware model for non-DIY people
+
+Add handling for cover open / close on both Arduino and ASCOM driver
+
+Binary distribution
