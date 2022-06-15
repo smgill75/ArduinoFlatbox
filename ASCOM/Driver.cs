@@ -144,33 +144,7 @@ namespace ASCOM.ArduinoFlatbox
             }
             
         }
-        private bool connect_network()
-        {
-            TcpClient client = new TcpClient();
-            NetworkStream nwStream;
-            client.Connect(iphost, port);
-            nwStream = client.GetStream();
-            byte[] bytesToSend = ASCIIEncoding.ASCII.GetBytes("PING:#");
-            nwStream.Write(bytesToSend, 0, bytesToSend.Length);
-
-            byte[] bytesToRead = new byte[client.ReceiveBufferSize];
-            int bytesRead = nwStream.Read(bytesToRead, 0, client.ReceiveBufferSize);
-            string message = Encoding.ASCII.GetString(bytesToRead, 0, bytesRead);
-            nwStream.Close();
-            client.Close();
-            if (message == "PONG:#")
-            {
-                LogMessage("State", "Received state {0}", message);
-                connectedState = true;
-                LogMessage("Connected Set", "Connecting to port {0}", comPort);
-                return true;
-            }
-            else
-            {
-                connectedState = false;
-                return false;
-            }
-        }
+      
 
         private bool connect_serial()
         {

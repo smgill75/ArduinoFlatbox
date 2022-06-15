@@ -80,15 +80,19 @@ namespace ASCOM.ArduinoFlatbox
         private void InitUI()
         {
             // set the list of com ports to those that are currently available
+            string[] comports = System.IO.Ports.SerialPort.GetPortNames(); // use System.IO because it's static
             comboBoxComPort.Items.Clear();
-            comboBoxComPort.Items.AddRange(System.IO.Ports.SerialPort.GetPortNames());      // use System.IO because it's static
+            if (comports.Length > 0)
+            {
+                comboBoxComPort.Items.AddRange(comports);
+            }
             // select the current port if possible
 
             if (comboBoxComPort.Items.Contains(ArduinoFlatbox.comPort))
             {
                 comboBoxComPort.SelectedItem = ArduinoFlatbox.comPort;
             }
-            else
+            else if (comports.Length > 0 )
             {
                 comboBoxComPort.SelectedItem = comboBoxComPort.Items[0];
             }
