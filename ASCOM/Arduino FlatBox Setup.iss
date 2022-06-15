@@ -21,8 +21,8 @@ OutputBaseFilename="Arduino FlatBox Setup"
 Compression=lzma
 SolidCompression=yes
 ; Put there by Platform if Driver Installer Support selected
-WizardImageFile="C:\Program Files (x86)\ASCOM\Platform 6 Developer Components\Installer Generator\Resources\WizardImage.bmp"
-LicenseFile="C:\Program Files (x86)\ASCOM\Platform 6 Developer Components\Installer Generator\Resources\CreativeCommons.txt"
+WizardImageFile=".\Resources\WizardImage.bmp"
+LicenseFile=".\Resources\LICENSE.txt"
 ; {cf}\ASCOM\Uninstall\CoverCalibrator folder created by Platform, always
 UninstallFilesDir="{cf}\ASCOM\Uninstall\CoverCalibrator\Arduino FlatBox"
 
@@ -34,9 +34,9 @@ Name: "{cf}\ASCOM\Uninstall\CoverCalibrator\Arduino FlatBox"
 ; TODO: Add subfolders below {app} as needed (e.g. Name: "{app}\MyFolder")
 
 [Files]
-Source: "C:\Users\sgill\Documents\dev\ASCOM_Drivers\ASCOM Driver Template (CS)\bin\Release\ASCOM.ArduinoFlatbox.dll"; DestDir: "{app}"
+Source: ".\bin\Release\ASCOM.ArduinoFlatbox.dll"; DestDir: "{app}"
 ; Require a read-me HTML to appear after installation, maybe driver's Help doc
-Source: "C:\Users\sgill\Documents\dev\ASCOM_Drivers\ASCOM Driver Template (CS)\ReadMe.htm"; DestDir: "{app}"; Flags: isreadme
+Source: ".\Resources\ReadMe.txt"; DestDir: "{app}"; Flags: isreadme
 ; TODO: Add other files needed by your driver here (add subfolders above)
 
 
