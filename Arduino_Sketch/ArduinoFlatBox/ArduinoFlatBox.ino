@@ -40,7 +40,10 @@
 
 */
 
+// use if NINA baords like MKR WiFi 1010, Arduino MKR VIDOR 4000, Arduino UNO WiFi Rev.2 and Nano 33 IoT
 #include <WiFiNINA.h>
+// Use if MKR1000 or other 101 boards
+// #include <WiFi101.h>
 #include <WiFiUdp.h>
 #include <EEPROMex.h>
 
