@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <ApplicationIcon>ASCOM.ico</ApplicationIcon>
     <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>ASCOMDriverTemplate.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Arduino Flatbox.snk</AssemblyOriginatorKeyFile>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -140,14 +140,13 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ASCOM.png" />
-    <None Include="ASCOMDriverTemplate.snk" />
+    <None Include="Arduino Flatbox.snk" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Content Include="ASCOM.ico" />
-    <Content Include="ReadMe.htm" />
     <None Include="Resources\ASCOM.bmp" />
   </ItemGroup>
   <ItemGroup>
