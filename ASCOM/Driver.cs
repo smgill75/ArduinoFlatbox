@@ -87,14 +87,11 @@ namespace ASCOM.ArduinoFlatbox
         internal static string traceStateProfileName = "Trace Level";
         internal static string traceStateDefault = "false";
         internal static ASCOM.Utilities.Serial serialport = new ASCOM.Utilities.Serial();
-        //internal static TcpClient client = new TcpClient();
-        //internal static NetworkStream nwStream;
-
+  
 
         internal static int brightnesslevel = 0;
         internal static int maxbrightness = 255;
         internal static bool calibratoron = false;
-
 
 
         /// <summary>
@@ -164,7 +161,7 @@ namespace ASCOM.ArduinoFlatbox
             catch (Exception ex)
             {
                 string error_message = "Error opening port: " + ex.Message;
-                System.Windows.Forms.MessageBox.Show(error_message);
+                throw new ASCOM.DriverException(error_message);
             }
 
             try
@@ -243,7 +240,8 @@ namespace ASCOM.ArduinoFlatbox
             }
             if (retry_counter <= 0)
             {
-                System.Windows.Forms.MessageBox.Show("Error connecting to flatbox, please ensure the device is on and connected to the network.");
+                string error_message = "Error connecting to flatbox, please ensure the device is on and connected to the network.";
+                throw new ASCOM.DriverException(error_message);
             }
             return "";
         }
@@ -275,8 +273,7 @@ namespace ASCOM.ArduinoFlatbox
             {
                 String error_message = "Brightness not between 0 and 255. Attemping to set brightness to 0.";
                 setBrightness(0);
-                System.Windows.Forms.MessageBox.Show(error_message);
-                return 0;
+                throw new ASCOM.DriverException(error_message);
             }
 
         }
@@ -314,9 +311,11 @@ namespace ASCOM.ArduinoFlatbox
             }
             else
             {
+                send_command_network_udp("0");
                 String error_message = "Bug in imaging program: Invalid brightness requested (" + level.ToString() + "), must set brightness between 0 and" + maxbrightness.ToString() + ". Brightness being set to 0." ;
-                System.Windows.Forms.MessageBox.Show(error_message);
-                return 0;
+                
+                throw new ASCOM.DriverException(error_message);
+                //System.Windows.Forms.MessageBox.Show(error_message);
             }
 
         }
