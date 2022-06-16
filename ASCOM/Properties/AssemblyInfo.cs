@@ -7,13 +7,13 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 //
 // TODO - Add your authorship information here
-[assembly: AssemblyTitle("ASCOM.TEMPLATEDEVICENAME.TEMPLATEDEVICECLASS")]
-[assembly: AssemblyDescription("ASCOM TEMPLATEDEVICECLASS driver for TEMPLATEDEVICENAME")]
+[assembly: AssemblyTitle("ASCOM.ArduinoFlatbox.CoverCalibrator")]
+[assembly: AssemblyDescription("ASCOM CoverCalibrator driver for TEMPLATEDEVICENAME")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("The ASCOM Initiative")]
-[assembly: AssemblyProduct("ASCOM TEMPLATEDEVICECLASS driver for TEMPLATEDEVICENAME")]
-[assembly: AssemblyCopyright("Copyright © $year$ The ASCOM Initiative")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Steven Gill")]
+[assembly: AssemblyProduct("ASCOM CoverCalibrator driver for ArduinoFlatbox")]
+[assembly: AssemblyCopyright("Copyright © $year$ Steven Gill")]
+[assembly: AssemblyTrademark("GPLv2 See License File")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -35,5 +35,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 //
 // TODO - Set your driver's version here
-[assembly: AssemblyVersion("6.5.1.0")]
-[assembly: AssemblyFileVersion("6.5.1.0")]
+[assembly: AssemblyVersion("0.1.0.0")]
+[assembly: AssemblyFileVersion("0.1.0.0")]
