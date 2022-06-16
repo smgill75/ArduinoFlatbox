@@ -21,8 +21,8 @@ OutputBaseFilename="Arduino FlatBox Setup"
 Compression=lzma
 SolidCompression=yes
 ; Put there by Platform if Driver Installer Support selected
-WizardImageFile=".\Resources\WizardImage.bmp"
-LicenseFile=".\Resources\LICENSE.txt"
+WizardImageFile="Resources\WizardImage.bmp"
+LicenseFile="Resources\LICENSE.txt"
 ; {cf}\ASCOM\Uninstall\CoverCalibrator folder created by Platform, always
 UninstallFilesDir="{cf}\ASCOM\Uninstall\CoverCalibrator\Arduino FlatBox"
 

@@ -96,10 +96,6 @@ namespace ASCOM.ArduinoFlatbox
             {
                 comboBoxComPort.SelectedItem = comboBoxComPort.Items[0];
             }
-            //if (ArduinoFlatbox.ip_host != null)
-            //txtIP.Text = ArduinoFlatbox.ip_host.ToString();
-            //if (txtport != null)
-            // txtport.Text = ArduinoFlatbox.port.ToString();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)

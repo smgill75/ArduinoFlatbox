@@ -27,7 +27,7 @@ The build process will attempt to register the DLL on the machine upon build. Yo
 You can build your own installation package by running InnoSetup found here: https://jrsoftware.org/isinfo.php
 
 Inside the ASCOM directory in an ISS file that you can right click and select "compile." This will place a setup executable in the same directory. You can then take this and install
-on any other computer 
+on any other computer. Note: the InnoSetup .iss file expects you to build a release version. The setup will not build a setup package for a debug version.
 
 
 
