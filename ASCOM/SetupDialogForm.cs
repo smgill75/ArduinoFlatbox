@@ -41,18 +41,18 @@ namespace ASCOM.ArduinoFlatbox
         {
             // Place any validation constraint checks here
             // Update the state variables with results from the dialogue
-            ArduinoFlatbox.comPort = (string)comboBoxComPort.SelectedItem;
             if (rdwifi.Checked == true)
             {
                 ArduinoFlatbox.connectionType = "network";
                 ArduinoFlatbox.iphost = txtIP.Text;
                 ArduinoFlatbox.port = Int32.Parse(txtport.Text);
             }
-            else
+            else if (rdSerial.Checked == true && comboBoxComPort.Items.Count > 0) 
             {
                 ArduinoFlatbox.connectionType = "serial";
+                ArduinoFlatbox.comPort = (string)comboBoxComPort.SelectedItem;
             }
-             
+
         }
 
         private void cmdCancel_Click(object sender, EventArgs e) // Cancel button event handler

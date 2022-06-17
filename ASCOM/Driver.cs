@@ -67,7 +67,7 @@ namespace ASCOM.ArduinoFlatbox
     {
        
         internal static string driverID = "ASCOM.ArduinoFlatbox";
-        private static string driverDescription = "AdruinoFlatbox";
+        private static string driverDescription = "ArduinoFlatbox";
 
         internal static string comPortProfileName = "COM Port"; // Constants used for Profile persistence
         internal static string comPortDefault = "COM1";
